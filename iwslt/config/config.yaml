@@ -1,0 +1,9 @@
+use_sample_rate: 16000         
+input_channels: 1            
+input_feat_per_channel: 1    
+feature_type: raw  
+use_audio_input: true          
+
+shuffle: true
+
+vocab_filename: llama_vocab.txt

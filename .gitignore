@@ -1,0 +1,32 @@
+# Python and local environments
+**/__pycache__/
+**/*.py[cod]
+**/*.so
+**/*.egg-info/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local secrets and editor/OS files
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Experiment outputs, data, and model artifacts
+/data/
+/checkpoints/
+/finetuned_ckpts/
+/wandb/
+/exp_results/
+/mustc_simul/
+/kibans/
+/submission/
+/submission_log/
+
+# Machine-local path overrides and legacy experiment scripts
+**/_path.sh
+/script/qwen_scripts/
+/script/llama_scripts/
+/script/gemma_scripts/

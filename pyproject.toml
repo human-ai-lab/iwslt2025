@@ -1,0 +1,54 @@
+[project]
+name = "iwslt2025"
+version = "0.1.0"
+description = "NAIST simultaneous speech translation system for IWSLT 2025"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "ha3ci-lab" }]
+keywords = ["speech-translation", "simultaneous-translation", "iwslt"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: GPU :: NVIDIA CUDA",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "einops==0.8.1",
+    "fairseq",
+    "pandas==2.2.3",
+    "peft==0.14.0",
+    "pyyaml==6.0.2",
+    "unbabel-comet>=2.2.0",
+    "sacrebleu[ja]==2.4.3",
+    "sentencepiece==0.2.0",
+    "simuleval",
+    "soundfile==0.12.1",
+    "tensorboardx>=2.6.4",
+    "tiktoken==0.8.0",
+    "tqdm==4.64.1",
+    "transformers==4.47.0",
+    "wandb>=0.20.1",
+    "nvidia-cublas-cu12~=12.1.0",
+    "nvidia-cuda-cupti-cu12~=12.1.0",
+    "nvidia-cuda-nvrtc-cu12~=12.1.0",
+    "nvidia-cuda-runtime-cu12~=12.1.0",
+    "nvidia-cufft-cu12~=11.0.0",
+    "nvidia-curand-cu12~=10.3.0",
+    "nvidia-cusolver-cu12~=11.4.0",
+    "nvidia-cusparse-cu12~=12.1.0",
+    "nvidia-nvtx-cu12~=12.1.0",
+    "silero-vad>=6.2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ha3ci-lab/iwslt2025"
+Paper = "https://aclanthology.org/2025.iwslt-1.39/"
+Repository = "https://github.com/ha3ci-lab/iwslt2025"
+
+[tool.uv.sources]
+fairseq = { path = "fairseq", editable = true }
+simuleval = { path = "SimulEval", editable = true }

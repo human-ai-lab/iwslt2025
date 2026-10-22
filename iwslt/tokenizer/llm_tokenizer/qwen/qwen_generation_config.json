@@ -1,0 +1,8 @@
+{
+    "comment": "taken from: https://huggingface.co/Qwen/Qwen2.5-7B/blob/main/generation_config.json",
+    "bos_token_id": 151643,
+    "do_sample": false,
+    "eos_token_id": 151643,
+    "max_new_tokens": 2048,
+    "transformers_version": "4.37.0"
+  }
