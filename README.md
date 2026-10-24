@@ -5,10 +5,6 @@
 [![Paper](https://img.shields.io/badge/Paper-ACL%20Anthology-brightgreen)](https://aclanthology.org/2025.iwslt-1.39/)
 [![Models](https://img.shields.io/badge/Models-Hugging%20Face-blue)](https://huggingface.co/tan-ht/naist-iwslt2025)
 
-**English → German · Chinese · Japanese**
-
-Whisper + Qwen · LoRA adaptation · Local-agreement decoding · SHAS segmentation
-
 </div>
 
 The NAIST submission to the **IWSLT 2025 Simultaneous Speech Translation Track**.
