@@ -32,7 +32,12 @@ tgt_file="${data_dir}/target.txt"
 end_index="${END_INDEX:-}"
 llm_name="${LLM_NAME:-qwen}"
 
-for required_file in "${checkpoint}" "${agent}" "${src_file}" "${tgt_file}"; do
+checkpoint_files=("${checkpoint}")
+if [[ -d "${checkpoint}" ]]; then
+    checkpoint_files=("${checkpoint}/checkpoint.pt" "${checkpoint}/adapter_model.safetensors")
+fi
+
+for required_file in "${checkpoint_files[@]}" "${agent}" "${src_file}" "${tgt_file}"; do
     if [[ ! -f "${required_file}" ]]; then
         echo "Required file not found: ${required_file}" >&2
         exit 1

@@ -27,7 +27,12 @@ src_file="${DATA_ROOT}/src.txt"
 tgt_file="${DATA_ROOT}/tgt.txt"
 agent="${IWSLT25_ROOT}/iwslt/agents/stream_shas.py"
 
-for required_file in "${checkpoint}" "${shas_checkpoint}" "${agent}" "${src_file}" "${tgt_file}"; do
+checkpoint_files=("${checkpoint}")
+if [[ -d "${checkpoint}" ]]; then
+    checkpoint_files=("${checkpoint}/checkpoint.pt" "${checkpoint}/adapter_model.safetensors")
+fi
+
+for required_file in "${checkpoint_files[@]}" "${shas_checkpoint}" "${agent}" "${src_file}" "${tgt_file}"; do
     if [[ ! -f "${required_file}" ]]; then
         echo "Required file not found: ${required_file}" >&2
         exit 1
